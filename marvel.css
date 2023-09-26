@@ -1,8 +1,10 @@
 /* Estilo para el título */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #ed1d24;
-    padding: 20px 0;
-    text-align: center;
+    padding: 20px 10px;
 }
 
 h1 {
@@ -10,29 +12,61 @@ h1 {
     color: white;
     margin: 0;
     text-transform: uppercase;
+    text-align: center; /* Alinea todos los títulos al centro */
 }
 
-/* Estilo para los personajes */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* Estilo para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.character-card {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+.dropbtn {
+    background-color: #ed1d24;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.character-card h2 {
-    margin: 10px 0;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.character-card img {
-    max-width: 100%;
-    height: auto;
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ed1d24;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ed1d24;
+    color: white;
+}
+
+/* Estilo para la descripción de Spider-Man */
+.character-description {
+    text-align: center; /* Alinea el texto de la descripción al centro */
+}
+
+/* Estilo para la imagen de Spider-Man */
+.character-image {
+    max-width: 20%; /* Reduzca el tamaño de la imagen */
+    display: block;
+    margin: 0 auto; /* Alinea la imagen al centro horizontalmente */
 }
