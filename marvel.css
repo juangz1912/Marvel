@@ -1,0 +1,38 @@
+/* Estilo para el título */
+header {
+    background-color: #ed1d24;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Estilo para los personajes */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.character-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.character-card h2 {
+    margin: 10px 0;
+}
+
+.character-card img {
+    max-width: 100%;
+    height: auto;
+}

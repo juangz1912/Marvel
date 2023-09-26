@@ -4,7 +4,7 @@ const hash = "f79fa7ebb9d54616ed5ed6adb73d2bd6";
 
 const apiUrl = `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}`;
 
-const characterList = document.getElementById("character-list");
+const characterList = document.querySelector(".character-list");
 
 fetch(apiUrl)
     .then((response) => {
@@ -22,17 +22,16 @@ fetch(apiUrl)
             const characterThumbnail = character.thumbnail;
             const characterImage = `${characterThumbnail.path}.${characterThumbnail.extension}`;
 
-            const characterElement = document.createElement("div");
-            characterElement.innerHTML = `
+            const characterCard = document.createElement("div");
+            characterCard.classList.add("character-card");
+            characterCard.innerHTML = `
                 <h2>${characterName}</h2>
                 <img src="${characterImage}" alt="${characterName}" width="200">
             `;
 
-            characterList.appendChild(characterElement);
+            characterList.appendChild(characterCard);
         });
     })
     .catch((error) => {
         console.error("Error al realizar la solicitud:", error);
     });
-
-
