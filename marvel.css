@@ -5,6 +5,7 @@ header {
     align-items: center;
     background-color: #ed1d24;
     padding: 20px 10px;
+    margin: 0;
 }
 
 h1 {
@@ -12,7 +13,7 @@ h1 {
     color: white;
     margin: 0;
     text-transform: uppercase;
-    text-align: center; /* Alinea todos los títulos al centro */
+    text-align: center;
 }
 
 /* Estilo para el menú desplegable */
@@ -59,16 +60,33 @@ h1 {
     color: white;
 }
 
-/* Estilo para la descripción de Spider-Man */
-.character-description {
-    text-align: center; /* Alinea el texto de la descripción al centro */
-    margin: 20px; /* Añade margen para separar la descripción de otros elementos */
+/* Estilo para Spider-Man */
+.character-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Estilo para la imagen de Spider-Man */
 .character-image {
-    max-width: 20%; /* Hacer que la imagen ocupe todo el ancho disponible */
+    max-width: 20%;
     display: block;
-    margin: 0 auto; /* Alinea la imagen al centro horizontalmente */
+    margin: 0 auto;
 }
 
+.character-description {
+    margin-top: 20px;
+}
+
+/* Estilo para Marvel */
+.character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.character-card {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
