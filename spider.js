@@ -19,14 +19,17 @@ fetch(apiUrl)
         
         // Obtiene la imagen de Spider-Man
         const characterImageURL = `${character.thumbnail.path}.${character.thumbnail.extension}`;
+        // Obtiene la imagen de Spider-Man y agrega la clase "spider-image"
         const characterImage = document.createElement("img");
         characterImage.src = characterImageURL;
         characterImage.alt = character.name;
+        characterImage.classList.add("spider-image");
         
         // Obtiene la descripción de Spider-Man
         const characterDescription = document.createElement("div");
         characterDescription.textContent = character.description;
 
+        
         // Agrega la imagen y la descripción al HTML
         characterInfo.appendChild(characterImage);
         characterInfo.appendChild(characterDescription);

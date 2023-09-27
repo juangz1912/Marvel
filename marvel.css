@@ -61,21 +61,33 @@ h1 {
 }
 
 /* Estilo para Spider-Man */
-.character-info {
+.character-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 20px;
 }
 
-.character-image {
+.character-image-container {
     max-width: 20%;
     display: block;
-    margin: 0 auto;
+    margin-right: 20px;
+}
+
+.character-image {
+    max-width: 100%;
+}
+
+.character-info {
+    flex-grow: 1;
 }
 
 .character-description {
+    margin-top: 20px;
+}
+
+.additional-info {
     margin-top: 20px;
 }
 
@@ -90,3 +102,11 @@ h1 {
     flex-basis: calc(33.33% - 10px);
     margin-bottom: 20px;
 }
+/* ... Tus estilos CSS existentes ... */
+
+.spider-image {
+    max-width: 20%;
+    border: 2px solid #ed1d24;
+    border-radius: 10px;
+}
+
