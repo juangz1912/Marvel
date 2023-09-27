@@ -68,6 +68,7 @@ h1 {
     justify-content: center;
     text-align: center;
     padding: 20px;
+    
 }
 
 .character-image-container {
@@ -82,6 +83,7 @@ h1 {
 
 .character-info {
     flex-grow: 1;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .character-description {
@@ -96,12 +98,13 @@ h1 {
 .character-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .character-card {
     flex-basis: calc(33.33% - 10px);
     margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 /* Estilo para Spider-Man */
