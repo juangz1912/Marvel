@@ -1,17 +1,20 @@
+// Configuración de la API de Marvel
 const ts = "1";
 const apiKey = "3aa1cc7ff7c263759e5d658926966e52";
 const hash = "f79fa7ebb9d54616ed5ed6adb73d2bd6";
+const spiderManId = 1009610; // ID de Spider-Man en la API de Marvel
 
-// ID de Spider-Man en la API de Marvel
-const spiderManId = 1009610;
-
+// Construye la URL de la API
 const apiUrl = `https://gateway.marvel.com:443/v1/public/characters/${spiderManId}?ts=${ts}&apikey=${apiKey}&hash=${hash}`;
 
+// Elemento HTML donde se mostrará la información del personaje
 const characterInfo = document.querySelector(".character-info");
 
+// Realiza la solicitud a la API de Marvel
 fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
+        // Obtiene los datos del personaje
         const character = data.data.results[0];
         
         // Obtiene la imagen de Spider-Man
@@ -24,27 +27,27 @@ fetch(apiUrl)
         const characterDescription = document.createElement("div");
         characterDescription.textContent = character.description;
 
-        // Agrega información al HTML
+        // Agrega la imagen y la descripción al HTML
         characterInfo.appendChild(characterImage);
         characterInfo.appendChild(characterDescription);
 
-        // Cantidad de comics, series, stories y events
+        // Obtiene la cantidad de comics, series, stories y events
         const comicsCount = character.comics.available;
         const seriesCount = character.series.available;
         const storiesCount = character.stories.available;
         const eventsCount = character.events.available;
 
-        // Nombres de las 3 primeras series
+        // Obtiene los nombres de las 3 primeras series
         const series = character.series.items.slice(0, 3).map((seriesItem) => seriesItem.name);
 
-        // Agregar información adicional al HTML
+        // Agrega información adicional al HTML
         const additionalInfo = document.createElement("div");
         additionalInfo.innerHTML = `
             <p>Cantidad de comics: ${comicsCount}</p>
             <p>Cantidad de series: ${seriesCount}</p>
             <p>Cantidad de stories: ${storiesCount}</p>
             <p>Cantidad de events: ${eventsCount}</p>
-            <p>Ultimas 3 series: ${series.join(", ")}</p>
+            <p>Últimas 3 series: ${series.join(", ")}</p>
         `;
         characterInfo.appendChild(additionalInfo);
     })
