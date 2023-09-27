@@ -50,7 +50,7 @@ fetch(apiUrl)
             <p>Cantidad de series: ${seriesCount}</p>
             <p>Cantidad de stories: ${storiesCount}</p>
             <p>Cantidad de events: ${eventsCount}</p>
-            <p>Últimas 3 series: ${series.join(", ")}</p>
+            <p>Últimas 3 series:<br> ${series.join("<br> ")}</p>
         `;
         characterInfo.appendChild(additionalInfo);
     })
