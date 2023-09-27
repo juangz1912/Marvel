@@ -20,6 +20,7 @@ h1 {
 .dropdown {
     position: relative;
     display: inline-block;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .dropbtn {
@@ -102,11 +103,12 @@ h1 {
     flex-basis: calc(33.33% - 10px);
     margin-bottom: 20px;
 }
-/* ... Tus estilos CSS existentes ... */
 
+/* Estilo para Spider-Man */
 .spider-image {
     max-width: 20%;
     border: 2px solid #ed1d24;
     border-radius: 10px;
 }
+
 
