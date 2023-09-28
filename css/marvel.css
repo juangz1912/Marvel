@@ -9,7 +9,7 @@ header {
 }
 
 h1 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Marvel', 'Open Sans', sans-serif; 
     color: white;
     margin: 0;
     text-transform: uppercase;
@@ -20,7 +20,7 @@ h1 {
 .dropdown {
     position: relative;
     display: inline-block;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Marvel', 'Open Sans', sans-serif;
 }
 
 .dropbtn {
@@ -84,7 +84,7 @@ h1 {
 .character-info {
     flex-grow: 1;
     text-align: center;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Marvel', 'Open Sans', sans-serif;
 }
 
 .character-description {
@@ -104,7 +104,7 @@ h1 {
 
 .character-card {
     flex-basis: calc(20%);
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Marvel', 'Open Sans', sans-serif;
 }
 
 /* Estilo para Spider-Man */
