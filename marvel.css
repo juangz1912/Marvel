@@ -83,6 +83,7 @@ h1 {
 
 .character-info {
     flex-grow: 1;
+    text-align: center;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
@@ -102,8 +103,7 @@ h1 {
 }
 
 .character-card {
-    flex-basis: calc(33.33% - 10px);
-    margin-bottom: 20px;
+    flex-basis: calc(20%);
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
