@@ -22,6 +22,7 @@ const marvel = {
               let characterName = character.name;
               let characterThumbnail = character.thumbnail;
               let characterImageURL = `${characterThumbnail.path}.${characterThumbnail.extension}`;
+              let characterURL = character.urls[0].url;
       
               // Filtra las imágenes no disponibles o en formato GIF
               if (characterImageURL.endsWith("image_not_available.jpg") || characterImageURL.endsWith(".gif")) {
@@ -32,7 +33,9 @@ const marvel = {
               contentHTML += `
                 <div class="character-card">
                     <h2>${characterName}</h2>
-                    <img src="${characterImageURL}" alt="${characterName}" width="200">
+                    <a href="${characterURL}" target="_blank">
+                      <img src="${characterImageURL}" alt="${characterName}" width="200">
+                    </a>  
                 </div>
               `;
             }
